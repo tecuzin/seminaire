@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   change_app_package_name: ^1.1.0
+  csv: ^5.0.2
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.13.1
