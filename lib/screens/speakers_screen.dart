@@ -50,18 +50,34 @@ class _HelloYouState extends State<HelloYou> {
 }
 
 class ListViewHSpeakers extends StatelessWidget {
-  final titles = ["Didier", "David", "Nicolas"];
+  final titles = [
+    "Laurent Pirard",
+    "Pascal Perez",
+    "Nicolas Polychronopoulos",
+    "David Rochelet",
+    "Jean-Marc Fernandez"
+  ];
   final subtitles = [
-    "Didier est RTE sur le projet Compta\n Il vous présentera tout ce qu'il a accompli cette année",
+    "linkedIn",
     "David ... c'est David :)\nbla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla\nbla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
-    "On ne présente plus Nicolas,\nil animera les keynotes"
+    "On ne présente plus Nicolas,\nil animera les keynotes",
+    "linkedIn",
+    "linkedIn"
   ];
   final photos = [
     "https://media.licdn.com/dms/image/C4D03AQF8l72lDw1w8Q/profile-displayphoto-shrink_200_200/0/1610274294913?e=1687392000&v=beta&t=xa3n0MJW08uvfdAiQZhMmlE73e_F1Fv3pRfuX_1bRQs",
     "https://media.licdn.com/dms/image/C4D03AQE2ceTht-bxtw/profile-displayphoto-shrink_200_200/0/1616663620453?e=1687392000&v=beta&t=vGoEmG_DwVbR8LmJQdK87W-eMY79MnBMUyQVb6qgiKk",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1nHNC8VuE70TL4SREVCeFZDcZWFMt68tDfqH_JrwIg&s"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1nHNC8VuE70TL4SREVCeFZDcZWFMt68tDfqH_JrwIg&s",
+    "",
+    ""
   ];
-  final icons = [Icons.thunderstorm, Icons.cloud, Icons.car_crash];
+  final icons = [
+    Icons.security_sharp,
+    Icons.security_sharp,
+    Icons.developer_board,
+    Icons.developer_board,
+    Icons.developer_board
+  ];
 
   @override
   Widget build(BuildContext context) {
