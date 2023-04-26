@@ -1,3 +1,4 @@
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:seminaire/shared/menu_bottom.dart';
 import '../shared/menu_drawer.dart';
@@ -10,8 +11,7 @@ class ContactsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: Text('Contacts utiles'),
-            backgroundColor: Colors.green),
+            title: Text('Contacts utiles'), backgroundColor: Colors.green),
         drawer: MenuDrawer(),
         bottomNavigationBar: MenuBottom(),
         body: Container(
@@ -54,7 +54,9 @@ class HowToComeList extends StatelessWidget {
     "https://chateaudemercues.com/_novaimg/4374716-1361023_257_0_1035_875_650_550.jpg",
     "https://www.accueil-temporaire.com/sites/default/files/public/urgence_0.jpg",
   ];
+
   final icons = [Icons.thunderstorm, Icons.cloud, Icons.car_crash, Icons.man];
+  final urlToOpen = ["https://goo.gl/maps/c5YuyMM69JHuPbUh7", "", "", ""];
 
   @override
   Widget build(BuildContext context) {
@@ -64,12 +66,24 @@ class HowToComeList extends StatelessWidget {
         itemCount: titles.length,
         itemBuilder: (context, index) {
           return Card(
-              child: ListTile(
-                  title: Text(titles[index]),
-                  subtitle: Text(subtitles[index]),
-                  leading: CircleAvatar(
-                      backgroundImage: NetworkImage(photos[index])),
-                  trailing: Icon(icons[index])));
+              child: InkWell(
+                  onTap: () => _launchURL(urlToOpen[index]),
+                  //child: new Text('Ouvrir dans Maps'),
+                  child: ListTile(
+                      title: Text(titles[index]),
+                      subtitle: Text(subtitles[index]),
+                      leading: CircleAvatar(
+                          backgroundImage: NetworkImage(photos[index])),
+                      trailing: Icon(icons[index]))));
         });
+  }
+
+  _launchURL(url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

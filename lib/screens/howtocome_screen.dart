@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:seminaire/shared/menu_bottom.dart';
 import '../shared/menu_drawer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HowtocomeScreen extends StatelessWidget {
   const HowtocomeScreen({Key? key}) : super(key: key);
@@ -62,6 +63,12 @@ class HowToComeList extends StatelessWidget {
     Icons.share,
     Icons.man
   ];
+  final urlToOpen = [
+    "https://goo.gl/maps/c5YuyMM69JHuPbUh7",
+    "",
+    "https://www.klaxit.com",
+    ""
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -71,12 +78,24 @@ class HowToComeList extends StatelessWidget {
         itemCount: titles.length,
         itemBuilder: (context, index) {
           return Card(
-              child: ListTile(
-                  title: Text(titles[index]),
-                  subtitle: Text(subtitles[index]),
-                  leading: CircleAvatar(
-                      backgroundImage: NetworkImage(photos[index])),
-                  trailing: Icon(icons[index])));
+              child: InkWell(
+                  onTap: () => _launchURL(urlToOpen[index]),
+                  //child: new Text('Ouvrir dans Maps'),
+                  child: ListTile(
+                      title: Text(titles[index]),
+                      subtitle: Text(subtitles[index]),
+                      leading: CircleAvatar(
+                          backgroundImage: NetworkImage(photos[index])),
+                      trailing: Icon(icons[index]))));
         });
+  }
+
+  _launchURL(url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }
