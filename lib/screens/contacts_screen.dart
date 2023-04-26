@@ -56,7 +56,12 @@ class HowToComeList extends StatelessWidget {
   ];
 
   final icons = [Icons.thunderstorm, Icons.cloud, Icons.car_crash, Icons.man];
-  final urlToOpen = ["https://goo.gl/maps/c5YuyMM69JHuPbUh7", "", "", ""];
+  final urlToOpen = [
+    "tel://0676731885",
+    "tel://0642419399",
+    "tel://0344629100",
+    ""
+  ];
 
   @override
   Widget build(BuildContext context) {
