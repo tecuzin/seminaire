@@ -95,16 +95,28 @@ class ThursdayEventsList extends StatelessWidget {
   ];
 
   final images = [
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI)
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+
   ];
 
   @override
@@ -114,12 +126,13 @@ class ThursdayEventsList extends StatelessWidget {
         itemCount: heuresJeudi.length,
         itemBuilder: (context, index) {
           return Card(
-              child: ListTile(
-                  title: Text(heuresJeudi[index]),
-                  subtitle: Text(sujetsJeudi[index]),
-                  leading: CircleAvatar(
-                      backgroundImage: AssetImage(Assets.assetsLogoISAGRI)),
-                  trailing: Icon(icons[index])));
+              child: InkWell(
+                  child: ListTile(
+                      title: Text(heuresJeudi[index]),
+                      subtitle: Text(sujetsJeudi[index]),
+                      leading: CircleAvatar(
+                          backgroundImage: AssetImage(Assets.picsLogoISAGRI)),
+                      trailing: Icon(icons[index]))));
         });
   }
 }
@@ -217,46 +230,56 @@ class FridayEventsList extends StatelessWidget {
   ];
 
   final images = [
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
-    Image.asset(Assets.assetsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+    Image.asset(Assets.picsLogoISAGRI),
+
   ];
 
   @override
@@ -270,7 +293,7 @@ class FridayEventsList extends StatelessWidget {
                   title: Text(heuresVendredi[index]),
                   subtitle: Text(sujetsVendredi[index]),
                   leading: CircleAvatar(
-                      backgroundImage: AssetImage(Assets.assetsLogoISAGRI)),
+                      backgroundImage: AssetImage(Assets.picsLogoISAGRI)),
                   trailing: Icon(icons[index])));
         });
   }

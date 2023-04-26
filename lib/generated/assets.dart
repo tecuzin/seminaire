@@ -2,8 +2,8 @@
 class Assets {
   Assets._();
 
-  static const String assetsBeach = 'assets/beach.jpg';
-  static const String assetsJeudi = 'assets/jeudi.csv';
-  static const String assetsLogoISAGRI = 'assets/logo-ISAGRI.webp';
+  static const String dataJeudi = 'assets/data/jeudi.csv';
+  static const String dataPlaces = 'assets/data/places.csv';
+  static const String picsLogoISAGRI = 'assets/pics/logo-ISAGRI.webp';
 
 }
