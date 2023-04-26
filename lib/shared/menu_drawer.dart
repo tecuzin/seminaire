@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seminaire/generated/assets.dart';
 import 'package:seminaire/screens/agenda_screen.dart';
 import 'package:seminaire/screens/contacts_screen.dart';
 import 'package:seminaire/screens/speakers_screen.dart';
@@ -33,8 +34,7 @@ class MenuDrawer extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white54,
           image: DecorationImage(
-            image: NetworkImage(
-                'https://upload.wikimedia.org/wikipedia/commons/3/3c/LOGO_ISAGRI_baseline_4518_BD.jpg'),
+            image: AssetImage(Assets.picslogoIsagriComplet),
           ),
         ),
         child: Text('', style: TextStyle(color: Colors.white, fontSize: 28))));

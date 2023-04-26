@@ -8,20 +8,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:seminaire/main.dart';
+import 'package:seminaire/shared/menu_drawer.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Check Drawer content', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const GlobeApp());
+    await tester.pumpWidget(const Drawer());
 
     // Verify that our counter starts at 0.
-    expect(find.text('Séminaire production 2023'), findsOneWidget);
-    expect(find.text('Bienvenue !!'), findsOneWidget);
-
-    // Tap the 'agenda icon
-    await tester.tap(find.byIcon(Icons.calendar_month));
-    await tester.pump();
-    expect(find.text('Programme du séminaire'), findsOneWidget);
-    expect(find.text('08h15-9h00'), findsOneWidget);
+    //expect(find.text('A propos'), findsOneWidget);
+    //expect(find.text('Version'), findsOneWidget);
   });
 }

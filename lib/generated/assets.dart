@@ -5,5 +5,7 @@ class Assets {
   static const String dataJeudi = 'assets/data/jeudi.csv';
   static const String dataPlaces = 'assets/data/places.csv';
   static const String picsLogoISAGRI = 'assets/pics/logo-ISAGRI.webp';
-
+  static const String homeBackground = 'assets/pics/homebg.jpg';
+  static const String picslogoIsagriComplet =
+      'assets/pics/isagriLogoComplet.jpg';
 }
