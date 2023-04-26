@@ -43,10 +43,10 @@ class HowToComeList extends StatelessWidget {
     "******** URGENCES ********"
   ];
   final subtitles = [
-    "Nicolas : 00 00 00 00 00",
+    "Nicolas : 06 76 73 18 85",
     "Pour le transport en bus : David 06 42 41 93 99",
-    "Contact de l'hôte du séminaire : 00 00 00 00 00",
-    "SST, Mr Sauveteur : 00 00 00 00 00\nPompiers : 18",
+    "Contact de l'hôte du séminaire : 03 44 62 91 00",
+    "Pompiers : 18",
   ];
   final photos = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVN-Y9YhP_i-TO5WNXaWLj6RYSQuegtTEufA&usqp=CAU",
