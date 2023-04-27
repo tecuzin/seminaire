@@ -7,8 +7,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:seminaire/main.dart';
-import 'package:seminaire/shared/menu_drawer.dart';
 
 void main() {
   testWidgets('Check Drawer content', (WidgetTester tester) async {
