@@ -705,6 +705,15 @@ class _GroupListState extends State<GroupList> {
         day: "Vendredi",
         name: 'Yohann DELHORBE',
         groupName: 'Les rêveurs numériques'),
+    Actor(
+        day: "Vendredi", name: 'Jean-Marc FERNANDEZ', groupName: 'Animateurs'),
+    Actor(day: "Vendredi", name: 'Laurent PIRARD', groupName: 'Animateurs'),
+    Actor(
+        day: "Vendredi",
+        name: 'Nicolas POLYCHRONOPOULOS',
+        groupName: 'Animateurs'),
+    Actor(day: "Vendredi", name: 'Thierry HARDION', groupName: 'Animateurs'),
+    Actor(day: "Vendredi", name: 'David ROCHELET', groupName: 'Animateurs'),
   ];
 
   final Map<String, List<Actor>> mapOfActors = {
@@ -778,8 +787,9 @@ class _GroupListState extends State<GroupList> {
                 asyncListFilter: (q, list) {
                   return list
                       .where((element) =>
-                          (element.name + element.day + element.groupName).toLowerCase()
-                              .contains(q))
+                          (element.name + element.day + element.groupName)
+                              .toLowerCase()
+                              .contains(q.toLowerCase()))
                       .toList();
                 },
                 emptyWidget: const EmptyView(),
@@ -852,7 +862,10 @@ class _GroupListState extends State<GroupList> {
         final filteredMap = {
           for (final entry in mapOfActors.entries)
             entry.key: (mapOfActors[entry.key] ?? [])
-                .where((element) => element.day.contains(p0))
+                .where((element) =>
+                    (element.name + element.day + element.groupName)
+                        .toLowerCase()
+                        .contains(p0.toLowerCase()))
                 .toList()
         };
         return filteredMap;
