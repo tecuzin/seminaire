@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seminaire/generated/assets.dart';
 import 'package:seminaire/shared/menu_bottom.dart';
 import '../shared/menu_drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -62,44 +63,46 @@ class ListViewHSpeakers extends StatelessWidget {
     "Thierry Hardion"
   ];
   final subtitles = [
-    "linkedIn",
-    "David ... c'est David :)\nbla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla\nbla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla ",
-    "On ne présente plus Nicolas,\nil animera les keynotes",
-    "linkedIn",
-    "linkedIn",
-    "linkedIn",
-    "linkedIn",
-    "linkedIn",
+    "",
+    "Mes 15 premières années professionnelles se sont déroulées dans le domaine de l’aéronautique à concevoir des systèmes avec une considération particulière pour la sécurité.\nPuis l’opportunité s’est présentée pour moi de prendre un poste de RSSI toujours dans un contexte d’édition logicielle où j’ai mis en place et obtenu une certification pour la norme ISO 27001 - 2013 (252 exigences).\nAujourd’hui je suis consultant indépendant dans le domaine de la sécurité et à ce titre je vous rejoins en tant qu’Architecte Sécurité.\n",
+    "",
+    "",
+    "",
+    "",
+    "Actuellement architecte affilié à GIGED, j’ai un peu d’expérience en Domain Driven Design et en diverses petites choses que je mets à profit pour accompagner du mieux que je peux le train.",
+    "",
   ];
   final photos = [
-    "https://media.licdn.com/dms/image/C4D03AQF8l72lDw1w8Q/profile-displayphoto-shrink_200_200/0/1610274294913?e=1687392000&v=beta&t=xa3n0MJW08uvfdAiQZhMmlE73e_F1Fv3pRfuX_1bRQs",
-    "https://media.licdn.com/dms/image/C4D03AQE2ceTht-bxtw/profile-displayphoto-shrink_200_200/0/1616663620453?e=1687392000&v=beta&t=vGoEmG_DwVbR8LmJQdK87W-eMY79MnBMUyQVb6qgiKk",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK1nHNC8VuE70TL4SREVCeFZDcZWFMt68tDfqH_JrwIg&s",
-    "",
-    "",
-    "",
-    "",
-    "",
+    Assets.picsSpeaker,
+    Assets.picsPperez,
+    Assets.picsSpeaker,
+    Assets.picsDrochelet,
+    Assets.picsSpeaker,
+    Assets.picsSpeaker,
+    Assets.picsSpeaker,
+    Assets.picsSpeaker,
   ];
   final icons = [
     Icons.security_sharp,
     Icons.security_sharp,
-    Icons.developer_board,
-    Icons.developer_board,
-    Icons.developer_board,
-    Icons.developer_board,
-    Icons.developer_board,
-    Icons.developer_board,
+    Icons.manage_accounts,
+    Icons.search,
+    Icons.manage_accounts,
+    Icons.people,
+    Icons.security_sharp,
+    Icons.manage_accounts,
   ];
   final urlToOpen = [
-    "https://www.linkedin.com/",
+    "https://www.linkedin.com/in/laurent-pirard-4820b0109/",
+    "https://fr.linkedin.com/in/pascalperezsec",
+    "https://www.linkedin.com/in/nipolychr/",
     "https://www.linkedin.com/in/david-rochelet-048834ab/",
-    "https://www.linkedin.com/",
-    "https://www.linkedin.com/",
-    "https://www.linkedin.com/",
-    "https://www.linkedin.com/",
-    "https://www.linkedin.com/",
+    "https://www.linkedin.com/in/jmarcfernandez/",
+    "https://www.lauralange.fr/",
+    "https://www.linkedin.com/in/yoannremy/",
+    "https://www.linkedin.com/in/thierry-hardion-519442a4/",
   ];
+
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
@@ -110,12 +113,11 @@ class ListViewHSpeakers extends StatelessWidget {
           return Card(
               child: InkWell(
                   onTap: () => _launchURL(urlToOpen[index]),
-                  //child: new Text('Ouvrir dans Maps'),
                   child: ListTile(
                       title: Text(titles[index]),
                       subtitle: Text(subtitles[index]),
                       leading: CircleAvatar(
-                          backgroundImage: NetworkImage(photos[index])),
+                          child: Image(image: AssetImage(photos[index]))),
                       trailing: Icon(icons[index]))));
         });
   }
