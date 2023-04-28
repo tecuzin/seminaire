@@ -10,5 +10,6 @@ class Assets {
   static const String picsLogoISAGRI = 'assets/pics/logo-ISAGRI.webp';
   static const String picsPperez = 'assets/pics/pperez.jpg';
   static const String picsSpeaker = 'assets/pics/speaker.webp';
+  static const String picsThardion = 'assets/pics/thardion.png';
 
 }

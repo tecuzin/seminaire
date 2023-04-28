@@ -70,7 +70,7 @@ class ListViewHSpeakers extends StatelessWidget {
     "",
     "",
     "Actuellement architecte affilié à GIGED, j’ai un peu d’expérience en Domain Driven Design et en diverses petites choses que je mets à profit pour accompagner du mieux que je peux le train.",
-    "",
+    "Je suis spécialisé depuis 30 ans dans la conception de logiciels de gestion pour les TPE PME et la profession comptable.\ns dernières années, je suis particulièrement impliqué dans la contribution des éditeurs de logiciels à la simplification et l'efficacité des relations informatiques entre les entreprises et les administrations, en tant de vice-président de l'association SDDS.\nLa réforme de la facture électronique est mon quotidien depuis 2019 et j'espère œuvrer à sa réussite pour nos clients, car je suis convaincu qu'elle sera bénéfique pour tous.\nL'enjeu est que les 4 millions d'entreprises françaises la comprennent bien et soient prêtes en juillet 2024.\nJe m'intéresse particulièrement à toutes les initiatives permettant d'expliquer simplement cette réforme",
   ];
   final photos = [
     Assets.picsSpeaker,
@@ -80,7 +80,7 @@ class ListViewHSpeakers extends StatelessWidget {
     Assets.picsSpeaker,
     Assets.picsSpeaker,
     Assets.picsSpeaker,
-    Assets.picsSpeaker,
+    Assets.picsThardion,
   ];
   final icons = [
     Icons.security_sharp,
