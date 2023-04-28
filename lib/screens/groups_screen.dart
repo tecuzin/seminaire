@@ -760,7 +760,7 @@ class _GroupListState extends State<GroupList> {
                     SizedBox(
                       height: 20,
                     ),
-                    Text('Soon, soon...')
+                    Text('Construction des listes de participants...')
                   ],
                 ),
                 errorWidget: Column(
