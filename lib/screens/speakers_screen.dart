@@ -68,17 +68,17 @@ class ListViewHSpeakers extends StatelessWidget {
     "",
     "",
     "",
-    "",
+    "Docteure en philosophie pratique, conférencière et chroniqueuse, Laura intervient depuis plusieurs années auprès de différentes organisations professionnelles. Cette activité, lui a valu de remporter le prix \"innovation\" du jeune entrepreneur de l’année 2013 à Lyon pour sa première création d\'entreprise \"Counseling Philosophie\". Laura n\'a qu\'une philosophie, celle d\'en avoir plusieurs. En plus de la philosophie, elle s’est adonnée au plaisir de la scène et a notamment fait la première partie de l’humoriste Karim Duval («Y») et du comédien Yannick Bourdelle («[est] Robert Lamoureux»). Elle écrit actuellement son premier livre qui sortira prochainement. Au cours de ses interventions, elle amène les équipes à prendre du recul sur la gestion de leurs pensées et de leurs actions en entreprise. Sur le thème que vous souhaitez aborder , elle invite à marquer un temps de « pose » et à prendre de la hauteur (sortir la tête du bocal, du cadre – lever la tête du guidon) pour se rendre davantage acteur.",
     "Actuellement architecte affilié à GIGED, j’ai un peu d’expérience en Domain Driven Design et en diverses petites choses que je mets à profit pour accompagner du mieux que je peux le train.",
     "Je suis spécialisé depuis 30 ans dans la conception de logiciels de gestion pour les TPE PME et la profession comptable.\ns dernières années, je suis particulièrement impliqué dans la contribution des éditeurs de logiciels à la simplification et l'efficacité des relations informatiques entre les entreprises et les administrations, en tant de vice-président de l'association SDDS.\nLa réforme de la facture électronique est mon quotidien depuis 2019 et j'espère œuvrer à sa réussite pour nos clients, car je suis convaincu qu'elle sera bénéfique pour tous.\nL'enjeu est que les 4 millions d'entreprises françaises la comprennent bien et soient prêtes en juillet 2024.\nJe m'intéresse particulièrement à toutes les initiatives permettant d'expliquer simplement cette réforme",
   ];
   final photos = [
     Assets.picsLpirard,
     Assets.picsPperez,
-    Assets.picsSpeaker,
+    Assets.picsNpolychronopoulos,
     Assets.picsDrochelet,
     Assets.picsSpeaker,
-    Assets.picsSpeaker,
+    Assets.picsLlange,
     Assets.picsSpeaker,
     Assets.picsThardion,
   ];

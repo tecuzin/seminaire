@@ -46,7 +46,7 @@ class HowToComeList extends StatelessWidget {
   ];
   final subtitles = [
     "Lien Google Maps : https://goo.gl/maps/pfA3xU4Nxhbm9X4e9",
-    "Départ 8h parking Isagri\nRetour 22h",
+    "Départ 7h30 parking Isagri\nRetour entre 18h et 18h30",
     "Trajet Klaxit : https://www.klaxit.com",
     "Rendez-vous directement à l'adresse :\n" +
         "Campus Serge Kampf Les Fontaines\n67 Rue de Chantilly, 60270 Gouvieux",
