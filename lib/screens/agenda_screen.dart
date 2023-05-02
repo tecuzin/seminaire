@@ -93,27 +93,17 @@ class ThursdayEventsList extends StatelessWidget {
   ];
 
   final images = [
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
+    Assets.agendaCoffee,
+    Assets.agendaTalk,
+    Assets.agendaWorkshop,
+    Assets.agendaBreaktime,
+    Assets.agendaTalk,
+    Assets.agendaTalk,
+    Assets.agendaBread,
+    Assets.agendaCards,
+    Assets.agendaTalk,
+    Assets.agendaProcess,
+    Assets.agendaTalk,
   ];
 
   @override
@@ -128,7 +118,7 @@ class ThursdayEventsList extends StatelessWidget {
                       title: Text(heuresJeudi[index]),
                       subtitle: Text(sujetsJeudi[index]),
                       leading: CircleAvatar(
-                          backgroundImage: AssetImage(Assets.picsLogoISAGRI)),
+                          child: Image(image: AssetImage(images[index]))),
                       trailing: Icon(icons[index]))));
         });
   }
@@ -181,18 +171,18 @@ class FridayEventsList extends StatelessWidget {
   ];
 
   final images = [
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
-    Image.asset(Assets.picsLogoISAGRI),
+    Assets.agendaBread,
+    Assets.agendaTalk,
+    Assets.agendaTools,
+    Assets.agendaCoffee,
+    Assets.agendaTools,
+    Assets.agendaBread,
+    Assets.agendaCards,
+    Assets.agendaTools,
+    Assets.agendaCoffee,
+    Assets.agendaProcess,
+    Assets.agendaWorkshop,
+    Assets.agendaGo,
   ];
 
   @override
@@ -206,8 +196,26 @@ class FridayEventsList extends StatelessWidget {
                   title: Text(heuresVendredi[index]),
                   subtitle: Text(sujetsVendredi[index]),
                   leading: CircleAvatar(
-                      backgroundImage: AssetImage(Assets.picsLogoISAGRI)),
+                      child: Image(image: AssetImage(images[index]))),
                   trailing: Icon(icons[index])));
         });
   }
+}
+
+class Event {
+  String picture;
+  String name;
+  String timestart;
+  String timefinish;
+  String description;
+  String icon;
+
+  Event({
+    required this.picture,
+    required this.name,
+    required this.timestart,
+    required this.timefinish,
+    required this.description,
+    required this.icon,
+  });
 }
