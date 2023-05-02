@@ -824,13 +824,13 @@ class _GroupListState extends State<GroupList> {
               ),
             ),
           ),
-          Align(
+          /*Align(
             alignment: Alignment.center,
             child: ElevatedButton(
               onPressed: addActor,
               child: const Text('Ajouter un participant'),
             ),
-          )
+          )*/
         ],
       ),
     );
