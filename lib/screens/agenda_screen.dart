@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:seminaire/shared/menu_bottom.dart';
 import '../generated/assets.dart';
 import '../shared/menu_drawer.dart';
+import 'groups_screen.dart';
 
 class AgendaScreen extends StatelessWidget {
   const AgendaScreen({Key? key}) : super(key: key);
@@ -55,11 +56,11 @@ class _HelloYouState extends State<HelloYou> {
 class ThursdayEventsList extends StatelessWidget {
   final heuresJeudi = [
     "08h15-9h00",
-    "9h-10h",
-    "10h-10h45",
+    "9h-10h15",
+    "10h15-10h45",
     "10h45-11h15",
-    "11h15-12h30",
-    "12h30-13h30",
+    "11h15-12h15",
+    "12h15-13h30",
     "13h30-14h00",
     "14h00-14h30",
     "14h30-17h00",
@@ -71,7 +72,7 @@ class ThursdayEventsList extends StatelessWidget {
     "Plénière",
     "Table ronde",
     "Pause",
-    "Conférence",
+    "Conférence + échange",
     "Buffet",
     "Temps libre",
     "Briefing activité",
@@ -98,12 +99,12 @@ class ThursdayEventsList extends StatelessWidget {
     Assets.agendaWorkshop,
     Assets.agendaBreaktime,
     Assets.agendaTalk,
-    Assets.agendaTalk,
     Assets.agendaBread,
     Assets.agendaCards,
     Assets.agendaTalk,
     Assets.agendaProcess,
     Assets.agendaTalk,
+    Assets.agendaBreaktime,
   ];
 
   @override
@@ -209,13 +210,14 @@ class Event {
   String timefinish;
   String description;
   String icon;
+  Actor Speaker;
 
-  Event({
-    required this.picture,
-    required this.name,
-    required this.timestart,
-    required this.timefinish,
-    required this.description,
-    required this.icon,
-  });
+  Event(
+      {required this.picture,
+      required this.name,
+      required this.timestart,
+      required this.timefinish,
+      required this.description,
+      required this.icon,
+      required this.Speaker});
 }
