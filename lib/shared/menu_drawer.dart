@@ -36,7 +36,7 @@ class MenuDrawer extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white54,
           image: DecorationImage(
-            image: AssetImage(Assets.picslogoIsagriComplet),
+            image: AssetImage(Assets.picsIsagriLogoComplet),
           ),
         ),
         child: Text('', style: TextStyle(color: Colors.white, fontSize: 28))));

@@ -8,7 +8,7 @@ class MenuBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.green.shade400,
       onTap: (int index) {
         switch (index) {
           case 0:
@@ -24,14 +24,14 @@ class MenuBottom extends StatelessWidget {
       },
       items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.group),
+          icon: Icon(Icons.group, color: Colors.black),
           label: 'Groupes',
         ),
         BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month), label: 'Programme'),
+            icon: Icon(Icons.calendar_month, color: Colors.black),
+            label: 'Programme'),
         BottomNavigationBarItem(
-            icon: Icon(Icons.phone), label: 'Contacts'),
-
+            icon: Icon(Icons.phone, color: Colors.black), label: 'Contacts'),
       ],
     );
   }
