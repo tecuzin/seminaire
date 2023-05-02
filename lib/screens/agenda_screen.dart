@@ -153,16 +153,16 @@ class FridayEventsList extends StatelessWidget {
   final sujetsVendredi = [
     "Café",
     "Introduction",
-    "Ateliers : \nSécurité : Comment renforcer la sécurité dans nos produits et services ?\nQualité : Comment renforcer la qualité de nos produits et services ?\nUX-UI ou Pyramide de succès ?",
+    "Ateliers : \nSécurité : Comment renforcer la sécurité dans nos produits et services ?\nQualité : Comment renforcer la qualité de nos produits et services ?\nUX-UI ou Pyramide de succès ?\nCulture : Comment amener, incarner et vivre les changements dans notre organisation ?",
     "Pause",
-    "Ateliers : \nSécurité : Comment renforcer la sécurité dans nos produits et services ?\nQualité : Comment renforcer la qualité de nos produits et services ?\nUX-UI ou Pyramide de succès ?",
+    "Ateliers : \nSécurité : Comment renforcer la sécurité dans nos produits et services ?\nQualité : Comment renforcer la qualité de nos produits et services ?\nUX-UI ou Pyramide de succès ?\nCulture : Comment amener, incarner et vivre les changements dans notre organisation ?",
     "Buffet",
     "Temps libre",
-    "Ateliers : \nSécurité : Comment renforcer la sécurité dans nos produits et services ?\nQualité : Comment renforcer la qualité de nos produits et services ?\nUX-UI ou Pyramide de succès ?",
+    "Ateliers : \nSécurité : Comment renforcer la sécurité dans nos produits et services ?\nQualité : Comment renforcer la qualité de nos produits et services ?\nUX-UI ou Pyramide de succès ?\nCulture : Comment amener, incarner et vivre les changements dans notre organisation ?",
     "Pause",
     "Préparation restitution",
     "Restitution",
-    "Départ"
+    "Départ",
   ];
 
   final icons = [
