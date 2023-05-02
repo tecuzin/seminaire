@@ -8,6 +8,7 @@ class Assets {
   static const String picsHomebg = 'assets/pics/homebg.jpg';
   static const String picsIsagriLogoComplet = 'assets/pics/isagriLogoComplet.jpg';
   static const String picsLogoISAGRI = 'assets/pics/logo-ISAGRI.webp';
+  static const String picsLpirard = 'assets/pics/lpirard.png';
   static const String picsPperez = 'assets/pics/pperez.jpg';
   static const String picsSpeaker = 'assets/pics/speaker.webp';
   static const String picsThardion = 'assets/pics/thardion.png';

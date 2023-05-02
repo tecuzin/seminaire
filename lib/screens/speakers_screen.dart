@@ -63,7 +63,7 @@ class ListViewHSpeakers extends StatelessWidget {
     "Thierry Hardion"
   ];
   final subtitles = [
-    "",
+    "Directeur technique Isagri\nEn charge de la veille technique,  des frameworks internes et de l’architecture applicative",
     "Mes 15 premières années professionnelles se sont déroulées dans le domaine de l’aéronautique à concevoir des systèmes avec une considération particulière pour la sécurité.\nPuis l’opportunité s’est présentée pour moi de prendre un poste de RSSI toujours dans un contexte d’édition logicielle où j’ai mis en place et obtenu une certification pour la norme ISO 27001 - 2013 (252 exigences).\nAujourd’hui je suis consultant indépendant dans le domaine de la sécurité et à ce titre je vous rejoins en tant qu’Architecte Sécurité.\n",
     "",
     "",
@@ -73,7 +73,7 @@ class ListViewHSpeakers extends StatelessWidget {
     "Je suis spécialisé depuis 30 ans dans la conception de logiciels de gestion pour les TPE PME et la profession comptable.\ns dernières années, je suis particulièrement impliqué dans la contribution des éditeurs de logiciels à la simplification et l'efficacité des relations informatiques entre les entreprises et les administrations, en tant de vice-président de l'association SDDS.\nLa réforme de la facture électronique est mon quotidien depuis 2019 et j'espère œuvrer à sa réussite pour nos clients, car je suis convaincu qu'elle sera bénéfique pour tous.\nL'enjeu est que les 4 millions d'entreprises françaises la comprennent bien et soient prêtes en juillet 2024.\nJe m'intéresse particulièrement à toutes les initiatives permettant d'expliquer simplement cette réforme",
   ];
   final photos = [
-    Assets.picsSpeaker,
+    Assets.picsLpirard,
     Assets.picsPperez,
     Assets.picsSpeaker,
     Assets.picsDrochelet,
