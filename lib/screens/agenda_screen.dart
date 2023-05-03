@@ -55,6 +55,7 @@ class _HelloYouState extends State<HelloYou> {
 
 class ThursdayEventsList extends StatelessWidget {
   final heuresJeudi = [
+    "7h30-8h15",
     "08h15-9h00",
     "9h-10h15",
     "10h15-10h45",
@@ -64,10 +65,12 @@ class ThursdayEventsList extends StatelessWidget {
     "13h30-14h00",
     "14h00-14h30",
     "14h30-17h00",
-    "17h00-18h00"
+    "17h00-18h00",
+    "18h00"
   ];
 
   final sujetsJeudi = [
+    "Trajet en bus depuis le parking Isagri",
     "Café",
     "Plénière",
     "Table ronde",
@@ -77,10 +80,12 @@ class ThursdayEventsList extends StatelessWidget {
     "Temps libre",
     "Briefing activité",
     "Activité",
-    "Remise des trophées et pot de clôture"
+    "Remise des trophées et pot de clôture",
+    "Trajet en bus en direction du site de Tillé (ou départ par vos propres moyens)",
   ];
 
   final icons = [
+    Icons.bus_alert,
     Icons.coffee,
     Icons.chat_bubble,
     Icons.meeting_room,
@@ -91,9 +96,11 @@ class ThursdayEventsList extends StatelessWidget {
     Icons.chat,
     Icons.meeting_room,
     Icons.card_giftcard,
+    Icons.bus_alert,
   ];
 
   final images = [
+    Assets.agendaGo,
     Assets.agendaCoffee,
     Assets.agendaTalk,
     Assets.agendaWorkshop,
@@ -104,7 +111,7 @@ class ThursdayEventsList extends StatelessWidget {
     Assets.agendaTalk,
     Assets.agendaProcess,
     Assets.agendaTalk,
-    Assets.agendaBreaktime,
+    Assets.agendaGo,
   ];
 
   @override
@@ -127,6 +134,7 @@ class ThursdayEventsList extends StatelessWidget {
 
 class FridayEventsList extends StatelessWidget {
   final heuresVendredi = [
+    "7h30-8h15",
     "08h15-9h00",
     "9h00-9h30",
     "9h30-10h50",
@@ -138,10 +146,11 @@ class FridayEventsList extends StatelessWidget {
     "15h20-15h30",
     "15h30-16h",
     "16h00-17h00",
-    "17h00"
+    "17h15"
   ];
 
   final sujetsVendredi = [
+    "Trajet en bus depuis le parking Isagri",
     "Café",
     "Introduction",
     "Ateliers : \nSécurité : Comment renforcer la sécurité dans nos produits et services ?\nQualité : Comment renforcer la qualité de nos produits et services ?\nUX-UI ou Pyramide de succès ?\nCulture : Comment amener, incarner et vivre les changements dans notre organisation ?",
@@ -153,10 +162,11 @@ class FridayEventsList extends StatelessWidget {
     "Pause",
     "Préparation restitution",
     "Restitution",
-    "Départ",
+    "Trajet en bus en direction du site de Tillé (ou départ par vos propres moyens)",
   ];
 
   final icons = [
+    Icons.bus_alert_outlined,
     Icons.coffee_outlined,
     Icons.chat_bubble_outline,
     Icons.meeting_room_outlined,
@@ -169,9 +179,11 @@ class FridayEventsList extends StatelessWidget {
     Icons.chat_bubble_outline,
     Icons.chat_bubble_outline,
     Icons.handshake_outlined,
+    Icons.bus_alert_outlined,
   ];
 
   final images = [
+    Assets.agendaGo,
     Assets.agendaBread,
     Assets.agendaTalk,
     Assets.agendaTools,
