@@ -307,7 +307,7 @@ class FridayEventsList extends StatelessWidget {
                       groupesVendredi[index] +
                       '\n Salle(s) : ' +
                       sallesVendredi[index] +
-                      '\n Animateur(s) :' +
+                      '\n Animateur(s) : ' +
                       animateursVendredi[index]),
                   leading: CircleAvatar(
                       child: Image(image: AssetImage(images[index]))),

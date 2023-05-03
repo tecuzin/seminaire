@@ -106,7 +106,10 @@ class _GroupListState extends State<GroupList> {
         day: "Jeudi",
         name: 'Catherine AA',
         groupName: 'The Tech Titans Assembly'),
-    Actor(day: "Jeudi", name: 'Cécile HODENCQ', groupName: 'Silicon Squadron'),
+    Actor(
+        day: "Jeudi",
+        name: 'Guillaume LHERMITE',
+        groupName: 'Silicon Squadron'),
     Actor(day: "Jeudi", name: 'Cécile LEROUZIC', groupName: 'Quantum Knights'),
     Actor(day: "Jeudi", name: 'Cécile PINCENT', groupName: 'Quantum Knights'),
     Actor(day: "Jeudi", name: 'Cédric GERARD', groupName: 'The Tech Savants'),
