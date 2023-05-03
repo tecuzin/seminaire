@@ -79,7 +79,7 @@ class ListViewHSpeakers extends StatelessWidget {
     Assets.picsDrochelet,
     Assets.picsJMF,
     Assets.picsLlange,
-    Assets.picsSpeaker,
+    Assets.picsYremi,
     Assets.picsThardion,
   ];
   final icons = [

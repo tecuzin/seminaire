@@ -27,4 +27,5 @@ class Assets {
   static const String picsPperez = 'assets/pics/pperez.jpg';
   static const String picsSpeaker = 'assets/pics/speaker.webp';
   static const String picsThardion = 'assets/pics/thardion.png';
+  static const String picsYremi = 'assets/pics/yremi.jpg';
 }
