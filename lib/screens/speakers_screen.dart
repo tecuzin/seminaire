@@ -59,7 +59,7 @@ class ListViewHSpeakers extends StatelessWidget {
     "David Rochelet",
     "Jean-Marc Fernandez",
     "Laura Lange",
-    "Yoann Remi",
+    "Yoann Rémy",
     "Thierry Hardion"
   ];
   final subtitles = [
