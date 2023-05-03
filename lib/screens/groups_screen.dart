@@ -930,21 +930,21 @@ class ActorItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Nom: ${actor.name}',
+                  'Nom : ${actor.name}',
                   style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  'Groupe: ${actor.groupName}',
+                  'Groupe : ${actor.groupName}',
                   style: const TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  'Jour: ${actor.day}',
+                  'Jour : ${actor.day}',
                   style: const TextStyle(
                     color: Colors.black,
                   ),
