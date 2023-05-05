@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:seminaire/generated/assets.dart';
 import 'package:seminaire/screens/agenda_screen.dart';
 import 'package:seminaire/screens/contacts_screen.dart';
+import 'package:seminaire/screens/groups_screen.dart';
 import 'package:seminaire/screens/speakers_screen.dart';
 import '../screens/howtocome_screen.dart';
 import '../screens/intro_screen.dart';
@@ -22,6 +24,7 @@ class MenuDrawer extends StatelessWidget {
     final List<String> menuTitles = [
       'A propos',
       'Agenda',
+      'Groupes et participants',
       'Speakers',
       'Contacts',
       'Comment venir ?',
@@ -33,8 +36,7 @@ class MenuDrawer extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white54,
           image: DecorationImage(
-            image: NetworkImage(
-                'https://upload.wikimedia.org/wikipedia/commons/3/3c/LOGO_ISAGRI_baseline_4518_BD.jpg'),
+            image: AssetImage(Assets.picsIsagriLogoComplet),
           ),
         ),
         child: Text('', style: TextStyle(color: Colors.white, fontSize: 28))));
@@ -52,6 +54,9 @@ class MenuDrawer extends StatelessWidget {
               break;
             case 'Agenda':
               screen = AgendaScreen();
+              break;
+            case 'Groupes et participants':
+              screen = GroupsScreen();
               break;
             case 'Speakers':
               screen = SpeakersScreen();

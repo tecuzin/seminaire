@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seminaire/generated/assets.dart';
 import 'package:seminaire/shared/menu_bottom.dart';
 import '../shared/menu_drawer.dart';
 
@@ -16,8 +17,7 @@ class IntroScreen extends StatelessWidget {
         body: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-            image: NetworkImage(
-                'https://www.isagri.fr/hs-fs/hubfs/ISAGRI/site_isagri_fr/headers/bandeau_haut_home.jpg?width=1600&name=bandeau_haut_home.jpg'),
+            image: AssetImage(Assets.picsHomebg),
             fit: BoxFit.cover,
           )),
           /*child: SafeArea(

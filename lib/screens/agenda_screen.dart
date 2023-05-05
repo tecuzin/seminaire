@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:seminaire/shared/menu_bottom.dart';
+import '../generated/assets.dart';
 import '../shared/menu_drawer.dart';
+import 'groups_screen.dart';
 
 class AgendaScreen extends StatelessWidget {
   const AgendaScreen({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class AgendaScreen extends StatelessWidget {
         length: 2,
         child: Scaffold(
           backgroundColor: Colors.white60,
-         appBar: AppBar(
+          appBar: AppBar(
             bottom: const TabBar(
               tabs: [
                 Tab(text: 'Jeudi 4'),
@@ -52,49 +54,279 @@ class _HelloYouState extends State<HelloYou> {
 }
 
 class ThursdayEventsList extends StatelessWidget {
+  final heuresJeudi = [
+    "7h30-8h15",
+    "08h15-9h00",
+    "9h-10h15",
+    "10h15-10h45",
+    "10h45-11h15",
+    "11h15-12h15",
+    "12h15-13h30",
+    "13h30-14h00",
+    "14h00-14h30",
+    "14h30-17h00",
+    "17h00-18h00",
+    "18h00"
+  ];
+
+  final sujetsJeudi = [
+    "Trajet en bus depuis le parking Isagri",
+    "Café",
+    "Plénière",
+    "Table ronde",
+    "Pause",
+    "Conférence + échange",
+    "Buffet",
+    "Temps libre",
+    "Briefing activité",
+    "Activité",
+    "Remise des trophées et pot de clôture",
+    "Trajet en bus en direction du site de Tillé (ou départ par vos propres moyens)",
+  ];
+
+  final icons = [
+    Icons.bus_alert,
+    Icons.coffee,
+    Icons.chat_bubble,
+    Icons.meeting_room,
+    Icons.coffee,
+    Icons.chat,
+    Icons.lunch_dining,
+    Icons.rocket,
+    Icons.chat,
+    Icons.meeting_room,
+    Icons.card_giftcard,
+    Icons.bus_alert,
+  ];
+
+  final images = [
+    Assets.agendaGo,
+    Assets.agendaCoffee,
+    Assets.agendaTalk,
+    Assets.agendaWorkshop,
+    Assets.agendaBreaktime,
+    Assets.agendaTalk,
+    Assets.agendaBread,
+    Assets.agendaCards,
+    Assets.agendaTalk,
+    Assets.agendaProcess,
+    Assets.agendaTalk,
+    Assets.agendaGo,
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(8),
-      children: <Widget>[
-        ListTile(
-            title: Text("9h30 - 9h45 : Présentation des objectifs du séminaire"),
-            subtitle: Text("Introduction à ces deux journées d'échange et de réflexion sur l'avenir du développement chez Isagri"),
-            leading: CircleAvatar(backgroundImage: NetworkImage("https://assets.afcdn.com/story/20191030/2029701_w944h530c1cx3891cy1966cxt0cyt0cxb5760cyb3840.webp")),
-            trailing: Icon(Icons.chat_bubble_outline)),
-        ListTile( title: Text("9h45 - 10h30 : Bilan mi-année"),subtitle: Text("Rétrospective de la première moitié de dl'exércice"), leading: CircleAvatar(backgroundImage: NetworkImage("https://media.istockphoto.com/id/1343389492/fr/vectoriel/des-gens-minuscules-avec-un-puzzle-les-hommes-et-les-femmes-collectionnent-de-grandes.webp?s=2048x2048&w=is&k=20&c=gxwl1utvl9blwQFaGsTlIjSEVzWNdnHwceAqT8bv4RY=")), trailing: Icon(Icons.chat_bubble_outline)),
-        ListTile( title: Text("11h15 - 11h30 : Pause"),subtitle: Text("Petit  pause avant d'attaquer la seconde partie de cette matinée"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.coffee_outlined)),
-        ListTile( title: Text("11h30 - 13h00 : Vision globale des chantiers en cours"),subtitle: Text("Présentation des chantiers en corus afin de donner à chacun une vue d'ensemble"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.chat_bubble_outline)),
-        ListTile( title: Text("13h00 - 14h00 : Déjeuner"),subtitle: Text("On se retrouve au restaurant d'entreprise"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://www.lagazettedescommunes.com/wp-content/uploads/2019/09/pause-temps-mort-310x207.jpg")), trailing: Icon(Icons.lunch_dining_outlined)),
-        ListTile( title: Text("14h00 - 14h30 : Programme alternants"),subtitle: Text("- Partage de la vision, apports et bénéfices pour les équipes\n- Déterminer les offres\n- Qui va assurer les recrutements ?\n- Affectation des 10/12 alternants potentiels"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://www.lagazettedescommunes.com/wp-content/uploads/2019/09/pause-temps-mort-310x207.jpg")), trailing: Icon(Icons.chat_bubble_outline)),
-        ListTile( title: Text("14h30 - 15h45 : REX du module Immos"),subtitle: Text("- Contexte du projet\n- Qu'est-ce qui a été fait ?\n - Retours : ce qui a été appris, ce qui a fonctionné, quels ont été les freins, les prochaines étapes ?"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://www.lagazettedescommunes.com/wp-content/uploads/2019/09/pause-temps-mort-310x207.jpg")), trailing: Icon(Icons.chat_bubble_outline)),
-        ListTile( title: Text("15h45 - 16h00 : Pause"),subtitle: Text("Petit  pause avant d'attaquer la seconde partie de cette après-midi"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.coffee_outlined)),
-        ListTile( title: Text("17h00 - 18h30 : Aller vers le Web"),subtitle: Text("- Quelles sont nos forces ?\n- Qu'est-ce qui nous manque, nous freine ?\n- Quelles actions mettre en place ?\n\nMettre en place des groupes et travailler sur le sujet pour aussi résoudre les points suivants :\n- Identification des compétences clefs (techno, langages, méthodes, outils, design (DDD ?) …)\n- Plan de montée en compétence\n- Enablers à enclencher pour « accélérer »"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.workspaces_outlined)),
-        ListTile( title: Text("19h00 : Dîner"),subtitle: Text("Pour finir en beauté cette première journée"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.lunch_dining_rounded)),
-      ],
-    );
+    return ListView.separated(
+        separatorBuilder: (BuildContext context, int index) => const Divider(),
+        itemCount: heuresJeudi.length,
+        itemBuilder: (context, index) {
+          return Card(
+              child: InkWell(
+                  child: ListTile(
+                      title: Text(heuresJeudi[index]),
+                      subtitle: Text(sujetsJeudi[index]),
+                      leading: CircleAvatar(
+                          child: Image(image: AssetImage(images[index]))),
+                      trailing: Icon(icons[index]))));
+        });
   }
 }
 
 class FridayEventsList extends StatelessWidget {
+  final heuresVendredi = [
+    "7h30-8h15",
+    "08h15-9h00",
+    "9h00-9h30",
+    "9h30-10h50",
+    "9h30-10h50",
+    "9h30-10h50",
+    "10h50-11h10",
+    "11h10-12h30",
+    "11h10-12h30",
+    "11h10-12h30",
+    "12h30-13h30",
+    "13h30-14h00",
+    "14h00-15h20",
+    "14h00-15h20",
+    "14h00-15h20",
+    "15h20-15h30",
+    "15h30-16h",
+    "16h00-17h00",
+    "17h15"
+  ];
+
+  final sujetsVendredi = [
+    "Trajet en bus depuis le parking Isagri",
+    "Café",
+    "Introduction",
+    "Ateliers : Sécurité : Comment renforcer la sécurité dans nos produits et services ?",
+    "Ateliers : Qualité : Comment renforcer la qualité de nos produits et services ?",
+    "Ateliers : Changement culturel : Comment amener, incarner et vivre les changements dans notre organisation ?",
+    "Pause",
+    "Ateliers : Sécurité : Comment renforcer la sécurité dans nos produits et services ?",
+    "Ateliers : Qualité : Comment renforcer la qualité de nos produits et services ?",
+    "Ateliers : Changement culturel : Comment amener, incarner et vivre les changements dans notre organisation ?",
+    "Buffet",
+    "Temps libre",
+    "Ateliers : Sécurité : Comment renforcer la sécurité dans nos produits et services ?",
+    "Ateliers : Qualité : Comment renforcer la qualité de nos produits et services ?",
+    "Ateliers : Changement culturel : Comment amener, incarner et vivre les changements dans notre organisation ?",
+    "Pause",
+    "Préparation restitution",
+    "Restitution",
+    "Trajet en bus en direction du site de Tillé (ou départ par vos propres moyens)",
+  ];
+
+  final icons = [
+    Icons.bus_alert_outlined,
+    Icons.coffee_outlined,
+    Icons.chat_bubble_outline,
+    Icons.meeting_room_outlined,
+    Icons.meeting_room_outlined,
+    Icons.meeting_room_outlined,
+    Icons.coffee_outlined,
+    Icons.meeting_room_outlined,
+    Icons.lunch_dining_outlined,
+    Icons.rocket_launch_outlined,
+    Icons.handshake_outlined,
+    Icons.meeting_room_outlined,
+    Icons.meeting_room_outlined,
+    Icons.meeting_room_outlined,
+    Icons.chat_bubble_outline,
+    Icons.chat_bubble_outline,
+    Icons.handshake_outlined,
+    Icons.handshake_outlined,
+    Icons.bus_alert_outlined,
+  ];
+
+  final images = [
+    Assets.agendaGo,
+    Assets.agendaBread,
+    Assets.agendaTalk,
+    Assets.agendaTools,
+    Assets.agendaTools,
+    Assets.agendaTools,
+    Assets.agendaCoffee,
+    Assets.agendaTools,
+    Assets.agendaTools,
+    Assets.agendaTools,
+    Assets.agendaBread,
+    Assets.agendaCards,
+    Assets.agendaTools,
+    Assets.agendaTools,
+    Assets.agendaTools,
+    Assets.agendaCoffee,
+    Assets.agendaProcess,
+    Assets.agendaWorkshop,
+    Assets.agendaGo,
+  ];
+
+  final groupesVendredi = [
+    "",
+    "",
+    "",
+    "Les insurgés de l'innovation & Les super hackers",
+    "Les Ninjas du code",
+    "Les rêveurs du numérique",
+    "",
+    "Les Ninjas du code",
+    "Les rêveurs du numérique & Les super hackers",
+    "Les insurgés de l'innovation",
+    "",
+    "",
+    "Les rêveurs du numérique",
+    "Les insurgés de l'innovation",
+    "Les super hackers & Les ninjas du code",
+    "",
+    "Tous les animateurs",
+    "Toutes les équipes",
+    "",
+    "",
+  ];
+
+  final sallesVendredi = [
+    "",
+    "",
+    "",
+    "308-309",
+    "307",
+    "310",
+    "",
+    "307",
+    "308-309",
+    "310",
+    "",
+    "",
+    "307",
+    "310",
+    "308-309",
+    "",
+    "Toutes les salles",
+    "",
+    "",
+    "",
+  ];
+
+  final animateursVendredi = [
+    "",
+    "",
+    "Nicolas Polychronopoulos",
+    "Laurent Pirard, Pascal Perez",
+    "David Rochelet, Nicolas Polychronopoulos",
+    "Jean-Marc Fernandez, Thierry Hardion",
+    "",
+    "Laurent Pirard, Pascal Perez",
+    "David Rochelet, Nicolas Polychronopoulos",
+    "Jean-Marc Fernandez, Thierry Hardion",
+    "",
+    "",
+    "Laurent Pirard, Pascal Perez",
+    "David Rochelet, Nicolas Polychronopoulos",
+    "Jean-Marc Fernandez, Thierry Hardion",
+    "",
+    "Tous les animateurs",
+    "Toutes les équipes",
+    "",
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.all(8),
-      children: <Widget>[
-        ListTile(
-            title: Text("9h - 10h30 : Suite exercice de la veille \"Aller vers le Web\""),
-            subtitle: Text("- Définir les raisons racine qui nous empêchent d'avancer\n- Voter sur les sujets\n- Traiter en groupes les sujets à traiter en priorité avec plan d'actions à construire"),
-            leading: CircleAvatar(backgroundImage: NetworkImage("https://assets.afcdn.com/story/20191030/2029701_w944h530c1cx3891cy1966cxt0cyt0cxb5760cyb3840.webp")),
-            trailing: Icon(Icons.workspaces)),
-        ListTile( title: Text("10h30 - 10h45 : Pause"),subtitle: Text("Petit  pause avant d'attaquer la seconde partie de cette matinée"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.coffee)),
-        ListTile( title: Text("10h45 - 13h00 : Restitution des groupes de travail et prise de décisions"),subtitle: Text("Restitution, partages, Q&A, décisions"), leading: CircleAvatar(backgroundImage: NetworkImage("https://media.istockphoto.com/id/1343389492/fr/vectoriel/des-gens-minuscules-avec-un-puzzle-les-hommes-et-les-femmes-collectionnent-de-grandes.webp?s=2048x2048&w=is&k=20&c=gxwl1utvl9blwQFaGsTlIjSEVzWNdnHwceAqT8bv4RY=")), trailing: Icon(Icons.chat_bubble_rounded)),
-        ListTile( title: Text("13h00 - 14h00 : Déjeuner restaurant d'entreprise"),subtitle: Text("Mi-temps avant d'attaquer la dernière demi-journée"), leading: CircleAvatar(backgroundImage: NetworkImage("https://media.istockphoto.com/id/1343389492/fr/vectoriel/des-gens-minuscules-avec-un-puzzle-les-hommes-et-les-femmes-collectionnent-de-grandes.webp?s=2048x2048&w=is&k=20&c=gxwl1utvl9blwQFaGsTlIjSEVzWNdnHwceAqT8bv4RY=")), trailing: Icon(Icons.lunch_dining_rounded)),
-        ListTile( title: Text("14h00 - 15h15 : ART Sync"),subtitle: Text("Pour tout savoir"), leading: CircleAvatar(backgroundImage: NetworkImage("https://media.istockphoto.com/id/1343389492/fr/vectoriel/des-gens-minuscules-avec-un-puzzle-les-hommes-et-les-femmes-collectionnent-de-grandes.webp?s=2048x2048&w=is&k=20&c=gxwl1utvl9blwQFaGsTlIjSEVzWNdnHwceAqT8bv4RY=")), trailing: Icon(Icons.workspaces)),
-        ListTile( title: Text("15h15 - 15h30 : Pause"),subtitle: Text("Petit  pause avant d'attaquer la seconde partie de cette après-midi"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.coffee)),
-        ListTile( title: Text("15h30 - 16h00 : Le rôle du DBA"),subtitle: Text("Pour tout savoir sur ce rôle mal connu"), leading: CircleAvatar(backgroundImage: NetworkImage("https://media.istockphoto.com/id/1343389492/fr/vectoriel/des-gens-minuscules-avec-un-puzzle-les-hommes-et-les-femmes-collectionnent-de-grandes.webp?s=2048x2048&w=is&k=20&c=gxwl1utvl9blwQFaGsTlIjSEVzWNdnHwceAqT8bv4RY=")), trailing: Icon(Icons.chat_bubble_rounded)),
-        ListTile( title: Text("16h00 - 17h00 : ROTI et tour de table"),subtitle: Text("Dernier échange avant de reprendre la route"), leading:  CircleAvatar(backgroundImage: NetworkImage("https://upload.wikimedia.org/wikipedia/fr/thumb/d/d8/Apple_Keynote.jpeg/220px-Apple_Keynote.jpeg")), trailing: Icon(Icons.handshake_rounded)),
-      ],
-    );
+    return ListView.separated(
+        separatorBuilder: (BuildContext context, int index) => const Divider(),
+        itemCount: heuresVendredi.length,
+        itemBuilder: (context, index) {
+          return Card(
+              child: ListTile(
+                  title: Text(heuresVendredi[index]),
+                  subtitle: Text(sujetsVendredi[index] +
+                      '\n Equipes : ' +
+                      groupesVendredi[index] +
+                      '\n Salle(s) : ' +
+                      sallesVendredi[index] +
+                      '\n Animateur(s) : ' +
+                      animateursVendredi[index]),
+                  leading: CircleAvatar(
+                      child: Image(image: AssetImage(images[index]))),
+                  trailing: Icon(icons[index])));
+        });
   }
+}
+
+class Event {
+  String picture;
+  String name;
+  String timestart;
+  String timefinish;
+  String description;
+  String icon;
+  Actor Speaker;
+
+  Event(
+      {required this.picture,
+      required this.name,
+      required this.timestart,
+      required this.timefinish,
+      required this.description,
+      required this.icon,
+      required this.Speaker});
 }

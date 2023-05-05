@@ -3,7 +3,7 @@ import 'package:seminaire/screens/agenda_screen.dart';
 import 'package:seminaire/screens/contacts_screen.dart';
 import 'package:seminaire/screens/howtocome_screen.dart';
 import 'package:seminaire/screens/speakers_screen.dart';
-import 'screens/bmi_screen.dart';
+import 'package:seminaire/screens/groups_screen.dart';
 import 'screens/intro_screen.dart';
 
 void main() {
@@ -23,6 +23,7 @@ class GlobeApp extends StatelessWidget {
         '/speakers': (context) => SpeakersScreen(),
         '/contacts': (context) => ContactsScreen(),
         '/howtocome': (context) => HowtocomeScreen(),
+        '/groups': (context) => GroupsScreen(),
       },
       initialRoute: '/',
     );
