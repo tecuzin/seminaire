@@ -42,4 +42,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Start release build
-        run: flutter build apk
+        run: flutter build apk && flutter build web && firebase deploy --force --only hosting
