@@ -33,6 +33,9 @@ jobs:
           # 11
           flutter-version: "3.0.0"
           channel: 'stable'
+          
+      - name: Update dependencies
+        run: flutter upgrade
       # 12
       - name: Get dependencies
         run: flutter pub get
