@@ -49,3 +49,5 @@ jobs:
         with:
           # Artifact name
           name: AndroidAPK
+          path: build/app/outputs/flutter-apk/app-release.apk
+
