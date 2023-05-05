@@ -2,11 +2,22 @@
 class Assets {
   Assets._();
 
+  static const String agendaBread = 'assets/pics/agenda/bread.jpg';
+  static const String agendaBreaktime = 'assets/pics/agenda/breaktime.jpg';
+  static const String agendaCards = 'assets/pics/agenda/cards.jpg';
+  static const String agendaCoffee = 'assets/pics/agenda/coffee.png';
+  static const String agendaGears = 'assets/pics/agenda/gears.jpg';
+  static const String agendaGo = 'assets/pics/agenda/go.png';
+  static const String agendaProcess = 'assets/pics/agenda/process.jpg';
+  static const String agendaTalk = 'assets/pics/agenda/talk.png';
+  static const String agendaTools = 'assets/pics/agenda/tools.jpg';
+  static const String agendaWorkshop = 'assets/pics/agenda/workshop.png';
   static const String dataJeudi = 'assets/data/jeudi.csv';
   static const String dataPlaces = 'assets/data/places.csv';
   static const String picsDrochelet = 'assets/pics/drochelet.jpg';
   static const String picsHomebg = 'assets/pics/homebg.jpg';
   static const String picsIsagriLogoComplet = 'assets/pics/isagriLogoComplet.jpg';
+  static const String picsJMF = 'assets/pics/JMF.png';
   static const String picsLlange = 'assets/pics/llange.png';
   static const String picsLogoISAGRI = 'assets/pics/logo-ISAGRI.webp';
   static const String picsLpirard = 'assets/pics/lpirard.png';
@@ -14,5 +25,6 @@ class Assets {
   static const String picsPperez = 'assets/pics/pperez.jpg';
   static const String picsSpeaker = 'assets/pics/speaker.webp';
   static const String picsThardion = 'assets/pics/thardion.png';
+  static const String picsYremi = 'assets/pics/yremi.jpg';
 
 }
