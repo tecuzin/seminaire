@@ -741,97 +741,7 @@ class _GroupListState extends State<GroupList> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(15),
-              child: SearchableList<Actor>(
-                style: const TextStyle(fontSize: 25),
-                onPaginate: () async {
-                  await Future.delayed(const Duration(milliseconds: 1000));
-                  setState(() {
-                    actors.addAll([
-                      Actor(
-                          day: "Jeudi",
-                          name: 'Didier Sicre',
-                          groupName: 'Rostom'),
-                      Actor(
-                          day: "Jeudi",
-                          name: 'David Rochelet',
-                          groupName: 'Rostom'),
-                      Actor(
-                          day: "Vendredi",
-                          name: 'David Rochelet',
-                          groupName: 'Twati'),
-                    ]);
-                  });
-                },
-                builder: (Actor actor) => ActorItem(actor: actor),
-                loadingWidget: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    CircularProgressIndicator(),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text('Construction des listes de participants...')
-                  ],
-                ),
-                errorWidget: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.error,
-                      color: Colors.red,
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text('Erreur de chargement')
-                  ],
-                ),
-                asyncListCallback: () async {
-                  await Future.delayed(
-                    const Duration(
-                      milliseconds: 10000,
-                    ),
-                  );
-                  return actors;
-                },
-                asyncListFilter: (q, list) {
-                  return list
-                      .where((element) =>
-                          (element.name + element.day + element.groupName)
-                              .toLowerCase()
-                              .contains(q.toLowerCase()))
-                      .toList();
-                },
-                emptyWidget: const EmptyView(),
-                onRefresh: () async {},
-                onItemSelected: (Actor item) {},
-                inputDecoration: InputDecoration(
-                  labelText: "Filtrer par groupe, personne ou journée",
-                  fillColor: Colors.white,
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Colors.blue,
-                      width: 1.0,
-                    ),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                ),
-                secondaryWidget: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Container(
-                    color: Colors.white,
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 10,
-                      ),
-                      child: Center(
-                        child: Icon(Icons.sort),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              child: widget,
             ),
           ),
           /*Align(
@@ -856,45 +766,7 @@ class _GroupListState extends State<GroupList> {
   }
 
   Widget expansionSearchableList() {
-    return SearchableList<Actor>.expansion(
-      expansionListData: mapOfActors,
-      expansionTitleBuilder: (p0) {
-        return Container(
-          color: Colors.grey[300],
-          width: MediaQuery.of(context).size.width * 0.8,
-          height: 30,
-          child: Center(
-            child: Text(p0.toString()),
-          ),
-        );
-      },
-      filterExpansionData: (p0) {
-        final filteredMap = {
-          for (final entry in mapOfActors.entries)
-            entry.key: (mapOfActors[entry.key] ?? [])
-                .where((element) =>
-                    (element.name + element.day + element.groupName)
-                        .toLowerCase()
-                        .contains(p0.toLowerCase()))
-                .toList()
-        };
-        return filteredMap;
-      },
-      style: const TextStyle(fontSize: 25),
-      builder: (Actor actor) => ActorItem(actor: actor),
-      emptyWidget: const EmptyView(),
-      inputDecoration: InputDecoration(
-        labelText: "Filtrer par participant, groupe ou journée",
-        fillColor: Colors.white,
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
-            color: Colors.blue,
-            width: 1.0,
-          ),
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-      ),
-    );
+    return widget;
   }
 }
 
